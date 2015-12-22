@@ -1,14 +1,15 @@
 insert into orquestra (codorquestra, codsinfonia, nome, pais, datadecriacao) values
-(1, 1, 'Amazônia Jazz Band', 'Brasil', '02/01/2004'),
-(2, 2, 'Jovem de Goiás', 'Brasil', '05/06/2008'),
-(3, 3, 'Jovem de Atibaia', 'Brasil', '09/09/1987'),
-(4, 4, 'São Paulo Creates', 'Brasil', '12/09/1992'),
-(5, 5, 'Brazilian Boy', 'Brasil', '03/08/1954'),
-(6, 6, 'Rio Claro Sinfonia', 'Brasil', '07/08/2003'),
-(7, 7, 'Dyscovery  symphony', 'Brasil', '10/03/2001'),
-(8, 8, 'Brothers symphoy', 'EUA', '10/12/2012'),
-(9, 9, 'ABC orquestra sinfonica', 'Brasil', '04/02/2003'),
-(10, 10, 'Los niños', 'Argentina', '12/10/1994');
+	(1, 1, 'Amazônia Jazz Band', 'Brasil', '2004/01/02'),
+	(2, 2, 'Jovem de Goiás', 'Brasil', '2008/06/05'),
+	(3, 3, 'Jovem de Atibaia', 'Brasil', '09/09/1987'),
+	(4, 4, 'São Paulo Creates', 'Brasil', '12/09/1992'),
+	(5, 5, 'Brazilian Boy', 'Brasil', '03/08/1954'),
+	(6, 6, 'Rio Claro Sinfonia', 'Brasil', '07/08/2003'),
+	(7, 7, 'Dyscovery  symphony', 'Brasil', '10/03/2001'),
+	(8, 8, 'Brothers symphoy', 'EUA', '10/12/2012'),
+	(9, 9, 'ABC orquestra sinfonica', 'Brasil', '04/02/2003'),
+	(10, 10, 'Los niños', 'Argentina', '12/10/1994');
+
 
 insert into instrumentos (codinstrumento, nome) values
 (1, 'Violoncelo'),
@@ -56,8 +57,8 @@ insert into musicos (codmusico, codfuncao, codorquestra, nome, identidade, nacio
 (11, 1, 8, 'Fisichella Florenze', '18716625', 'Italiano', '10/09/1978'),
 (12, 3, 10, 'Bastian Höl', '82726', 'Alemão', '24/08/1980'),
 (13, 4, 1, 'Murilo Maia', '118823772', 'Brasileiro', '30/10/1985'),
-(14, 4, 3, 'Eder Neves', '92382893292', 'Brasileiro', '09/01/1977'),
-(15, 3, 4, 'Ruben Ferreira', '81883746237', 'Brasileiro', '01/08/1999');
+(14, 4, 3, 'Eder Neves', '9238289329', 'Brasileiro', '09/01/1977'),
+(15, 3, 4, 'Ruben Ferreira', '8188374623', 'Brasileiro', '01/08/1999');
 
 insert into sinfonia (codsinfonia, nome, compositor, datadecriacao) values 
 (1, 'Beethoven N5', 'Beethoven', '00/00/0000'),
