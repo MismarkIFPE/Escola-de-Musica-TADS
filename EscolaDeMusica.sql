@@ -1,14 +1,25 @@
 create database EscolaDeMusica;
 
-create table orquestra (
-codorquestra int auto_increment,
-codsinfonia int,
+create table instrumentos (
+codinstrumento int auto_increment,
 nome varchar(40),
-cidade varchar(40),
-pais varchar(30),
-datadecriacao date,
-PRIMARY KEY(codorquestra),
-FOREIGN KEY(codsinfonia) references sinfonia(codsinfonia)
+PRIMARY KEY(codinstrumento)
+); 
+
+create table numero(
+	codnumero int primary key,
+    numerocelular varchar(15),
+    numerofixo varchar(15)
+);
+
+create table endereco(
+	codendereco int primary key,
+    pais varchar(15),
+    estado varchar(40),
+    cidade varchar(40),
+    bairro varchar(40),
+    cep varchar(15),
+    numero int(15)
 );
 
 create table sinfonia (
@@ -19,21 +30,6 @@ datadecriacao date,
 PRIMARY KEY(codsinfonia)
 );
 
-create table musicos (
-codmusico int auto_increment,
-codfuncao int,
-codorquestra int,
-nome varchar(40),
-identidade varchar(10),
-nacionalidade varchar (30),
-datadenascimento date,
-PRIMARY KEY(codmusico),
-FOREIGN KEY(codfuncao)
-	references funcoes (codfuncao),
-FOREIGN KEY(codorquestra)
-	references orquestra (codorquestra)
-);
-
 create table funcoes (
 codfuncao int auto_increment,
 codinstrumento int, 
@@ -42,28 +38,51 @@ PRIMARY KEY(codfuncao),
 FOREIGN KEY(codinstrumento) references instrumentos(codinstrumento)
 );
 
-create table instrumentos (
-codinstrumento int auto_increment,
+
+create table orquestra (
+codorquestra int auto_increment,
+codsinfonia int,
 nome varchar(40),
-PRIMARY KEY(codinstrumento)
-); 
-
-create table numero(
-	codNumero int primary key,
-    numeroCelular varchar(15),
-    numeroFixo varchar(15)
-);
-
-create table endereco(
-	codEndereco int primary key,
-    pais varchar(15),
-    estado varchar(15),
-    cidade varchar(15),
-    bairro varchar(15),
-    cep varchar(15),
-    numero int
+cidade varchar(40),
+pais varchar(30),
+datadecriacao date,
+PRIMARY KEY(codorquestra),
+FOREIGN KEY(codsinfonia) 
+  references sinfonia(codsinfonia)
 );
 
 
+create table musicos (
+codmusico int auto_increment,
+codfuncao int,
+codorquestra int,
+codnumero int,
+codendereco int,
+nome varchar(40),
+identidade varchar(10),
+nacionalidade varchar (30),
+datadenascimento date,
+PRIMARY KEY(codmusico),
+FOREIGN KEY(codfuncao)
+	references funcoes (codfuncao),
+FOREIGN KEY(codorquestra)
+	references orquestra (codorquestra),
+FOREIGN KEY(codnumero)
+	references numero(codnumero),
+FOREIGN KEY (codendereco)
+	references endereco(codendereco)
+);
 
-
+create table apresentacao(
+	codapresentacao int primary key,
+	codorquestra int,
+	codsinfonia int,
+    datadeaprensentacao date,
+    cidade varchar(40),
+   FOREIGN KEY (codorquestra)
+   references orquestra(codorquestra),
+   FOREIGN KEY (codsinfonia)
+   references sinfonia(codsinfonia)
+   );
+   
+   
