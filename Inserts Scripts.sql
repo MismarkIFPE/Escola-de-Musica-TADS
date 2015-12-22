@@ -73,6 +73,8 @@ insert into sinfonia (codsinfonia, nome, compositor, datadecriacao) values
 (10, 'Titan', 'Mahler', '00/00/0000');
 
 
+select * from sinfonia;
 
+select * from funcoes;
 
 
