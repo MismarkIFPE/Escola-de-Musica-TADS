@@ -73,9 +73,9 @@ insert into sinfonia (codsinfonia, nome, compositor, datadecriacao) values
 (10, 'Titan', 'Mahler', '1878/00/00');
 
 insert into funcoes (codfuncao, codinstrumento, nome) values
-(1, 24, 'Maestro'),
-(2, 2, 'Spalla'),
-(3, 1, 'Chefe de Naipe'),
+(1, NULL, 'Maestro'),
+(2, NULL, 'Spalla'),
+(3, NULL, 'Chefe de Naipe'),
 (4, NULL, 'Tutti');
 
 insert into orquestra (codorquestra, codsinfonia, nome, cidade, pais, datadecriacao) values
@@ -108,8 +108,21 @@ insert into musicos (codmusico, codfuncao, codorquestra, codnumero, codendereco,
 (15, 3, 4, 15, 15, 'Ruben Ferreira', '8188374623', 'Brasileiro', '1978/12/20');
 
 
-
-
-
+insert into apresentacao (codapresentacao, codorquestra, codsinfonia, datadeapresentacao, cidade) values
+(1,2,4,'2015/12/31','Recife'),
+(2,3,3,'2015/12/28','Maceio'),
+(3,4,2,'2016/01/06','Rio de janeiro'),
+(4,5,5,'2016/01/10','Salvador'),
+(5,9,6,'2016/01/18','Porto Alegre'),
+(6,6,8,'2016/01/22','Buenos Aires'),
+(7,8,7,'2016/01/30','Brasilia'),
+(8,7,1,'2016/02/02','Goias'),
+(9,9,9,'2016/02/08','Minas Gerais'),
+(10,10,2,'2016/02/15','Ouro Preto'),
+(11,2,10,'2016/02/21','Manaus'),
+(12,1,8,'2016/02/28','Rio Branco'),
+(13,8,7,'2016/03/05','Teresina'),
+(14,9,4,'2016/03/12','Petrolina'),
+(15,3,1,'2016/03/20','Recife');
 
  

@@ -85,4 +85,5 @@ create table apresentacao(
    references sinfonia(codsinfonia)
    );
    
+   alter table apresentacao change column datadeaprensentacao datadeapresentacao date;
    
