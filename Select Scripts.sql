@@ -102,6 +102,11 @@ select mu.nome, en.pais, en.estado, en.cidade, orq.nome, orq.datadecriacao, num.
 	and mu.codfuncao in (select codfuncao from funcoes where nome like 'tutti')
 		order by mu.nome;
         
+select mu.nome, num.numerocelular, num.numerofixo
+ from musicos mu, numero num
+	where mu.codnumero = num.codnumero
+	and mu.codfuncao in (select codfuncao from funcoes where nome like 'maestro')
+		order by mu.nome;
         
 create view orquestra_apresentacao as
    select ap.datadeapresentacao, orq.nome
