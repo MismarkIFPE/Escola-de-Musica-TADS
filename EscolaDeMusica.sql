@@ -85,5 +85,27 @@ create table apresentacao(
    references sinfonia(codsinfonia)
    );
    
-   alter table apresentacao change column datadeaprensentacao datadeapresentacao date;
-   
+
+delete from musicos
+	where codmusico = 3;
+    
+delete from musicos
+	where codmusico = 4 and 9;
+
+delete from isntrumentos
+	where codinstrumento = 3 and 18;
+    
+    
+drop table musicos;
+drop table apresentacao;
+drop table endereco;
+drop table numero;
+drop table funcoes;
+drop table instrumentos;
+drop table orquestra;
+drop table sinfonia;
+drop procedure apresentacao;
+drop procedure nomeMaestro;
+drop procedure procuraFuncao;
+drop view orquestra_apresentacao;
+drop view funcaoSpalla;   
